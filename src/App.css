@@ -1,60 +1,72 @@
 /* Title container for the page */
 .title-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  margin-bottom: 20px;
-  background-color: #f5f5f5;
+  display: flex; /* Flexbox layout to center title horizontally and vertically */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 150px; /* Set the height of the title container */
+  margin-bottom: 20px; /* Space below the title */
+  background-color: #f5f5f5; /* Light gray background color */
 }
 
 h1 {
-  font-size: 36px;
-  font-weight: bold;
-  color: #333;
-  text-align: center;
-  margin: 0;
+  font-size: 36px; /* Font size for the title */
+  font-weight: bold; /* Bold font */
+  color: #333; /* Dark gray text color */
+  text-align: center; /* Center the text */
+  margin: 0; /* Remove default margin */
 }
 
+/* Gallery container for displaying images */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  justify-items: center;
-  padding: 20px;
+  display: grid; /* Grid layout for the gallery */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Flexible grid columns, minimum 200px, fill available space */
+  gap: 15px; /* Space between grid items */
+  justify-items: center; /* Center items horizontally within the grid */
+  padding: 20px; /* Padding around the gallery */
 }
 
+/* Styling for individual thumbnail images */
 .thumbnail {
-  width: 200px !important;
-  height: 200px !important;
-  object-fit: cover !important;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  width: 200px !important; /* Force width of thumbnails to 200px */
+  height: 200px !important; /* Force height of thumbnails to 200px */
+  object-fit: cover !important; /* Ensure the image covers the area without distortion */
+  border-radius: 10px; /* Round the corners of the thumbnails */
+  cursor: pointer; /* Change cursor to pointer when hovering over image */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition for hover effects */
 }
 
+/* Hover effect for thumbnails */
 .thumbnail:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05); /* Slightly enlarge the thumbnail on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow around the image */
 }
 
+/* Container for images, ensuring responsiveness */
 .images-container {
-  max-width: 1200px;
-  margin: 2rem auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  gap: 1rem;
+  max-width: 1200px; /* Limit the width of the container */
+  margin: 2rem auto; /* Add margin around the container (auto centers it) */
+  display: grid; /* Grid layout for the images */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(15rem, 1fr)
+  ); /* Responsive grid columns, with a minimum width of 15rem */
+  gap: 1rem; /* Space between the grid items */
 }
 
+/* Styling for individual image containers */
 .image {
-  width: 100%;
-  height: 20rem;
-  cursor: pointer;
+  width: 100%; /* Image takes up full width of the container */
+  height: 20rem; /* Fixed height for the image container */
+  cursor: pointer; /* Pointer cursor on hover */
 }
 
+/* Styling for the actual images inside the container */
 .image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
+  width: 100%; /* Image fills the entire width */
+  height: 100%; /* Image fills the entire height */
+  object-fit: cover; /* Ensure the image covers the container without distortion */
+  border-radius: 8px; /* Slightly round the corners of the image */
 }
