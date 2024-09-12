@@ -70,7 +70,7 @@ function App() {
 
   return (
     <>
-      {/* Title component, passing in text for the title */}
+      {/* Title component, passing in t3ext for the title */}
       <Title text="Elijah's Art Museum" />
 
       {/* Gallery grid to display thumbnail images */}
